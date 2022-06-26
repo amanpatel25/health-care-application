@@ -113,7 +113,7 @@ def upload_file():
             return render_template('predict.html', image_file_name = file.filename, label = label, accuracy = accuracy)
         except:
             flash("Please select the image first !!", "danger")      
-            return redirect(url_for("Malaria"))
+            return redirect(url_for("malaria"))
 
 @app.route('/upload11', methods=['POST','GET'])
 def upload11_file():
@@ -136,7 +136,7 @@ def upload11_file():
             return render_template('predict1.html', image_file_name = file.filename, label = label, accuracy = accuracy)
         except:
             flash("Please select the image first !!", "danger")      
-            return redirect(url_for("Pneumonia"))
+            return redirect(url_for("pneumonia"))
 
 
 @app.route('/uploads/<filename>')
